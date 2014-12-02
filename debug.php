@@ -1,5 +1,18 @@
 <?php
 
+/**
+ * @package voravor
+ * @version 1.2
+ */
+/*
+Plugin Name: Simple WP
+Plugin URI: http://www.voravor.com
+Description: Simple functions I can't live without...
+Author: vvor
+Version: 1.0
+Author URI: http://www.voravor.com
+*/
+
 if(!function_exists('debug')) {
     
     function debug($obj, $suppress = false)
