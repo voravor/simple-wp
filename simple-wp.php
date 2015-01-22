@@ -2,7 +2,7 @@
 
 /**
  * @package voravor
- * @version 1.2
+ * @version 1.3
  */
 /*
 Plugin Name: Simple WP
@@ -49,3 +49,18 @@ if(!function_exists('diebug')) {
         die();
     }
 }
+
+if(!function_exists('jsonp_decode')) {
+    
+    function jsonp_decode($jsonp, $assoc = false)
+    {
+            
+        if($jsonp[0] !== '[' && $jsonp[0] !== '{') { // we have JSONP
+            $jsonp = substr($jsonp, strpos($jsonp, '('));
+        }
+        
+        return json_decode(trim($jsonp,'();'), $assoc);
+        
+    }
+}
+    
