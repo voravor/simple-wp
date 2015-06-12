@@ -2,14 +2,14 @@
 
 /**
  * @package voravor
- * @version 1.4
+ * @version 1.5
  */
 /*
 Plugin Name: Simple WP
 Plugin URI: http://www.voravor.com
 Description: Simple functions I can't live without...
 Author: vvor
-Version: 1.4
+Version: 1.5
 Author URI: http://www.voravor.com
 */
 
