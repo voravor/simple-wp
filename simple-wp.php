@@ -70,4 +70,22 @@ if(!function_exists('is_login_page')) {
     	return in_array($GLOBALS['pagenow'], array('wp-login.php', 'wp-register.php'));
 	}
 }
+
+if(!function_exists('multi_implode')) {
+    function multi_implode($glue, $array) {
+        $ret = '';
+
+        foreach ($array as $item) {
+            if (is_array($item)) {
+                $ret .= multi_implode($glue, $item) . $glue;
+            } else {
+                $ret .= $item . $glue;
+            }
+        }
+
+        $ret = substr($ret, 0, 0-strlen($glue));
+
+        return $ret;
+    }
+}
     
