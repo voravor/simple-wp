@@ -9,7 +9,7 @@ Plugin Name: Simple WP
 Plugin URI: http://www.voravor.com
 Description: Simple functions I can't live without...
 Author: vvor
-Version: 1.5
+Version: 1.6
 Author URI: http://www.voravor.com
 */
 
