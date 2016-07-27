@@ -88,4 +88,21 @@ if(!function_exists('multi_implode')) {
         return $ret;
     }
 }
+
+if(!function_exists('dirname_levels')) {
+    function dirname_levels( $path, $depth = 2 ) {
+
+        for( $d = 1 ; $d <= $depth ; $d++ ) {
+            $path = dirname( $path );
+        }
+
+        return $path;
+    }
+}
+
+if(!function_exists('post_exists')) {
+    function post_exists($id) {
+        return is_string( get_post_status( $id ) );
+    }
+}
     
