@@ -100,8 +100,8 @@ if(!function_exists('dirname_levels')) {
     }
 }
 
-if(!function_exists('post_exists')) {
-    function post_exists($id) {
+if(!function_exists('post_exists_by_id')) {
+    function post_exists_by_id($id) {
         return is_string( get_post_status( $id ) );
     }
 }
