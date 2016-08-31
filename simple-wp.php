@@ -2,14 +2,14 @@
 
 /**
  * @package voravor
- * @version 1.7.1
+ * @version 1.8
  */
 /*
 Plugin Name: Simple WP
 Plugin URI: http://www.voravor.com
 Description: Simple functions I can't live without...
 Author: vvor
-Version: 1.7.1
+Version: 1.8
 Author URI: http://www.voravor.com
 */
 
@@ -103,6 +103,19 @@ if(!function_exists('dirname_levels')) {
 if(!function_exists('post_exists_by_id')) {
     function post_exists_by_id($id) {
         return is_string( get_post_status( $id ) );
+    }
+}
+
+if(!function_exists('str_lreplace')) {
+    function str_lreplace($search, $replace, $subject) {
+        $pos = strrpos($subject, $search);
+
+        if($pos !== false)
+        {
+            $subject = substr_replace($subject, $replace, $pos, strlen($search));
+        }
+
+        return $subject;
     }
 }
     
